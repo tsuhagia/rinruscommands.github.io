@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RINRUS Commands</title>
+  </head>
+  <body>
+    <form action="/" method="post">
+      <textarea name="driver_input" cols="50" rows="10"></textarea>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
