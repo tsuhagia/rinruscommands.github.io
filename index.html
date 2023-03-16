@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RINRUS Residue Interaction Network Residue Selector</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <div class="body-overlay"></div>
+  <!-- Remaining HTML content -->
+  <main>
+  <header>
+    <h1>RINRUS Residue Interaction Network Residue Selector</h1>
+  </header>
+
+    <section id="introduction">
+  <h2 id="introduction-header">Introduction</h2>
+  <div class="section-content">
+      <p>
+        RINRUS (Residue Interaction Network Residue Selector) is a tool that helps researchers analyze the interactions between residues in protein structures. This information can be used to identify key residues, predict protein function, and design novel proteins.
+      </p>
+  </div>
+    </section>
+
+    <section id="links">
+      <h2>Important Links</h2>
+      <ul>
+        <li><a href="https://github.com/natedey/RINRUS" target="_blank">RINRUS GitHub Repository</a></li>
+      </ul>
+
+    </section>
+
+    <section id="protein-details">
+      <h2 id="protein-details-header">Protein Details</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Protein Name</td>
+            <td>Example Protein</td>
+          </tr>
+          <tr>
+            <td>PDB ID</td>
+            <td>1ABC</td>
+          </tr>
+          <tr>
+            <td>Sequence</td>
+            <td>MVKQIESKTAFQEA...</td>
+          </tr>
+          <tr>
+            <td>Function</td>
+            <td>Example protein function</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+    </section>
+
+    <section id="interaction-results" style="display:none;">
+      <h2 >Interaction Results</h2>
+      <div id="interaction-output"></div>
+  </div>
+    </section>
+
+
+
+    <section id="protein-details">
+      <!-- Protein details table as before -->
+    </section>
+
+    <section id="residue-selector">
+      <h2>RINRUS Commands Generator</h2>
+      <p>Fill following details to generate commands need to run to generate RINRUS models:</p>
+      <form id="residue-form">
+        <label for="pdb-input">PDB:</label>
+        <input type="text" id="pdb-input" name="pdb-input" value="3bwm.pdb" /><br>
+    
+        <label for="seed-input">Seed:</label>
+        <input type="text" id="seed-input" name="seed-input" value="A:300,A:301,A:302" /><br>
+    
+        <label for="rin-program-input">RIN_program:</label>
+        <input type="text" id="rin-program-input" name="rin-program-input" value="probe" /><br>
+    
+        <label for="residue-to-add-input">Residue_to_add:</label>
+        <input type="text" id="residue-to-add-input" name="residue-to-add-input" value="A:299:c+s,A:120:n+s" /><br>
+    
+        <label for="histidine-input">Histidine:</label>
+        <input type="text" id="histidine-input" name="histidine-input" value="" /><br>
+    
+        <label for="models-input">Model(s):</label>
+        <input type="text" id="models-input" name="models-input" value="all" /><br>
+    
+        <label for="substrate-charge-input">Substrate(s)_charge:</label>
+        <input type="text" id="substrate-charge-input" name="substrate-charge-input" value="+1" /><br>
+    
+        <label for="multiplicity-input">Multiplicity:</label>
+        <input type="text" id="multiplicity-input" name="multiplicity-input" value="3" /><br>
+    
+        <label for="residues-not-to-protonate-input">residues_not_to_protonate:</label>
+        <input type="text" id="residues-not-to-protonate-input" name="residues-not-to-protonate-input" value="A:301,A:302" /><br>
+    
+        <label for="seed-residues-want-to-freeze-input">seed_residues_want_to_freeze:</label>
+        <input type="text" id="seed-residues-want-to-freeze-input" name="seed-residues-want-to-freeze-input" value="A:301,A:302" /><br>
+    
+        <label for="computational-program-input">Computational_program:</label>
+        <input type="text" id="computational-program-input" name="computational-program-input" value="gaussian" /><br>
+    
+        <label for="input-template-path-input">input_template_path:</label>
+        <input type="text" id="input-template-path-input" name="input-template-path-input" value="~/git/RINRUS/template_files/input_temp" /><br>
+    
+        <label for="basisset-library-input">basisset_library:</label>
+        <input type="text" id="basisset-library-input" name="basisset-library-input" value="~/git/RINRUS/template_files/basisinfo" /><br>
+    
+        <button type="submit">Generate commands</button>
+      </form>
+    </section>
+    
+
+    <section id="interaction-results" style="display:none;">
+      <!-- Interaction results as before -->
+    </section>
+
+    <section id="publications">
+      <h2>Related Publications</h2>
+      <ul>
+        <li>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/34358526/" target="_blank">
+            Title: Cheminformatic quantum mechanical enzyme model design: A catechol-O-methyltransferase case study<br>
+            Authors: Thomas J Summers, Qianyi Cheng, Manuel A Palma, Nathan J DeYonker, et al.<br>
+            Journal: Biophysical Society<br>
+            Year: 2021
+          </a>
+        </li>
+        <li>
+          <a href="https://chemrxiv.org/engage/chemrxiv/article-details/60c7532dee301c3497c7ad72" target="_blank">
+            Title: Rational, Reproducible, and Rigorous Computational Enzymology: The Case of Catechol-O-Methyltransferase<br>
+            Authors: Jane Smith, John Doe, et al.<br>
+            Journal: ChemRxiv<br>
+            Year: 2021
+          </a>
+        </li>
+        <li>
+          <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1846408" target="_blank">
+            Title:NSF Grant- The Three R's: A Model-Building Toolkit for Rational, Reproducible, and Rigorous Computational Enzymology<br>
+            Principal Investigator: Nathan DeYonker (Principal Investigator) ndyonker@memphis.edu<br>
+            Institution: Example University<br>
+            Duration: 2019-2023
+          </a>
+        </li>
+      </ul>
+    </section>
+<section id="images">
+  <figure>
+    <img src="RINRUSflowchart.jpg" alt="RINRUS Flowchart" />
+ <!--     <figcaption>RINRUS Flowchart</figcaption>-->
+  </figure>
+  <figure>
+    <img src="Picture2.png" alt="Picture 2" />
+<!--   <figcaption>Picture 2</figcaption>-->
+  </figure>
+</section>
+
+
+	
+  <footer>
+    <p>© 2023 RINRUS Residue Interaction Network Residue Selector. All rights reserved.</p>
+  </footer>
+  </main>
+
+<script>
+
+</script>
+</body>
+</html>
